@@ -1,0 +1,52 @@
+/* Colors
+
+Primary: rgb(29, 53, 87)
+Secondary: rgb(168, 218, 220)
+
+*/
+
+/* General CSS */
+
+* {
+  font-family: "Times New Roman", Arial, helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  color: rgb(29, 53, 87);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.825em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.525em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+a {
+  color: rgb(168, 218, 220);
+}
+
+a:visited {
+  color: rgb(29, 53, 87);
+}
+
+/* Index CSS */
+
+
+/* Attractions CSS */
+
+
+/* Theatre CSS */
