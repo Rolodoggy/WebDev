@@ -1,0 +1,122 @@
+#fpIntro {
+  text-align: center;
+}
+
+#fpEventArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: 
+    'events deals';
+  grid-template-rows: auto auto;
+  column-gap: 30px;
+}
+
+#fpEventArea img:first-child {
+  margin-bottom: 4px;
+}
+#fpEventArea img:nth-child(n+1) {
+  margin-bottom: 4px;
+}
+#fpEventArea img:last-child {
+  margin-bottom: 0 !important;
+}
+
+#fpParkEvents { 
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 
+    'eventsTitle eventsTitle'
+    'eventsImages eventsList'
+    'eventsImages eventsList'
+    'eventsImages eventsList'
+    'eventsImages eventsList';
+}
+#fpParkEventsTitle { 
+  text-align: center;
+  grid-area: eventsTitle; 
+}
+#fpParkEventsList { 
+  grid-area: eventsList;
+  display: grid; 
+}
+#fpParkEventsList h3 {
+  margin-top: 32px;
+}
+#fpParkEventsImages { 
+  grid-area: eventsImages;
+  display: grid; 
+}
+#fpParkEventsImages img{
+  width: 125px;
+  height: auto;
+  box-shadow: none;
+  margin: 10px auto;
+}
+#fpDealsImages img{
+  width: 330px;
+  height: auto;
+  margin: auto;
+  box-shadow: none;
+}
+#fpDeals { 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    'dealsTitle'
+    'dealsImages'
+    'dealsList';
+}
+#fpDealsTitle { 
+  text-align: center;
+  grid-area: dealsTitle; 
+}
+#fpDealsList { 
+  grid-area: dealsList; 
+}
+#fpDealsImages { 
+  grid-area: dealsImages;
+  display: grid;
+}
+
+#fpBannerContainer h2 {
+  text-align: center;
+}
+
+#fpParksBanner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 500px; 
+}
+
+/* See comments below on animation. */
+#fpParksBanner img { 
+  position: absolute;
+  animation: slideshow 15s infinite;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  height: 100%;
+}
+
+/* A simple animation that will transition the opacity level */
+@keyframes slideshow {
+  25%{opacity:1;} 
+  40%{opacity:0;}
+}
+/* 
+  These will delay the start of the animation by x seconds
+  depending on the position. Each image will have 5 seconds display
+  time.
+  If adding more images, be sure to update "animation" above, 
+  where slideshow is used, otherwise there will be timinig issues.
+ */
+#fpParksBanner img:nth-child(1){ animation-delay:0s; }
+#fpParksBanner img:nth-child(2){ animation-delay:5s; }
+#fpParksBanner img:nth-child(3){ animation-delay:10s; }

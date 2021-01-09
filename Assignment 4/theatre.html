@@ -3,6 +3,14 @@
 
 <head>
     <title>FamilyParc - Theatre, Hotel and Bookings</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <meta charset="utf-8">
     <meta name="description" content="This is a website for a family theme park named FamilyParc.">
     <meta name="author" content="FamilyParc">
@@ -10,14 +18,20 @@
     <meta name="refresh" content="600">
     <meta name="keywords" content="FamilyParc, Family Theme Park">
 
+    <!-- Include the main stylesheet with common styling across all pages -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- This page's specific styles -->
+    <link rel="stylesheet" href="css/theatre.css">
 </head>
 
 <body>
-
+    <!-- This forms the main content area of the page. -->
     <div id="main">
-        <div class="fpContainer no-padding margin-top-10">
-            <nav id="fpNavBar">
+
+        <!-- Fixed center aligned content container -->
+        <nav class="fpContainer no-padding margin-top-10">
+            <!-- Navigation links. The current active page isn't clickable and has different styling. -->
+            <div id="fpNavBar">
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
@@ -29,16 +43,21 @@
                         Theatre, Hotel and Bookings
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
-        <div id="fpHeaderContainer">
+        <!-- 
+            Header container spans the full width of the viewport, 
+            so an "fpContainer" div will sit inside this .
+        -->
+        <header id="fpHeaderContainer">
             <div class="fpContainer no-padding">
                 <img id="fpLogo" src="img/logo.png" alt="FamilyParc Logo" width="115" height="115" />
                 <h1>Theatre, Hotel and Bookings</h1>
             </div>
-        </div>
+        </header>
 
+        <!-- From here on out is the page specific content. -->
         <div class="fpContainer">
             <div class="fpCard">
                 <div id="fpTheatreShowingsContainer">
@@ -46,6 +65,12 @@
                         <h2>Theatre Showings</h2>
                     </div>
                     <div id="fpTheatreShowingsDescription">
+                        <p>
+                            Tired of all the rides? Just want to sit down and watch a good 'ol show? We've got you
+                            covered!
+                            We have a weekly rotation of shows at our theatre, listed in the schedule below.
+                        </p>
+
                         <ul>
                             <li>Super Happy Fun Time</li>
                             <li>A Very Good Show</li>
@@ -53,9 +78,13 @@
                             <li>Delightful Hats</li>
                             <li>Nosediving into a Pool of Cooked Spaghetti</li>
                         </ul>
+
+                        <p>
+                            Be sure to check back again next week to see what's new.
+                        </p>
                     </div>
                     <div id="fpTheatreShowingsImages">
-                        <img src="img/shows.jpg" alt="Image of theatre show" />
+                        <img src="img/shows.jpg" alt="Theatre showing" />
                     </div>
                 </div>
             </div>
@@ -68,7 +97,9 @@
                         <h2>Hotel</h2>
                     </div>
                     <div class="fpHotelPrices">
-                        <p>There are no room shortages currently. Pleae call to book. Here are the available room types:
+                        <p>
+                            There are no room shortages currently. Please call to book. Here are the available room
+                            types:
                         </p>
 
                         <ul>
@@ -78,7 +109,59 @@
                             <li>Double Room</li>
                         </ul>
                     </div>
+
+                    <!-- 
+                        This part is quite horrifying without javascript.
+                        The calendar won't do anything and is purely for visual purposes.
+                    -->
                     <div class="fpHotelCalendar">
+                        <div class="fpCalendar fpCard">
+                            <div class="fpCalendarMonth">
+                                December 2020
+                            </div>
+                            <div class="fpCalendarDOW">
+                                <div>Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="fpCalendarDOM">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                                <span>11</span>
+                                <span>12</span>
+                                <span>13</span>
+                                <span>14</span>
+                                <span>15</span>
+                                <span>16</span>
+                                <span>17</span>
+                                <span>18</span>
+                                <span>19</span>
+                                <span>20</span>
+                                <span>21</span>
+                                <span>22</span>
+                                <span>23</span>
+                                <span>24</span>
+                                <span>25</span>
+                                <span>26</span>
+                                <span>27</span>
+                                <span>28</span>
+                                <span>29</span>
+                                <span>30</span>
+                                <span>31</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -100,15 +183,196 @@
                         </ul>
                     </div>
                     <div class="fpBookingsCalendar">
+                        <div class="fpCalendar fpCard">
+                            <div class="fpCalendarMonth">
+                                December 2020
+                            </div>
+                            <div class="fpCalendarDOW">
+                                <div>Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="fpCalendarDOM">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                                <span>11</span>
+                                <span>12</span>
+                                <span>13</span>
+                                <span>14</span>
+                                <span>15</span>
+                                <span>16</span>
+                                <span>17</span>
+                                <span>18</span>
+                                <span>19</span>
+                                <span>20</span>
+                                <span>21</span>
+                                <span>22</span>
+                                <span>23</span>
+                                <span>24</span>
+                                <span>25</span>
+                                <span>26</span>
+                                <span>27</span>
+                                <span>28</span>
+                                <span>29</span>
+                                <span>30</span>
+                                <span>31</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="fpSalesBanner">
+        <div>
+            <h2>
+                BOOK NOW!
+            </h2>
+            <img src="img/Sale_pass_Banner.jpg" alt="Sales banner">
+        </div>
+    </div>
+
     <div id="fpFooterContainer">
         <div class="fpContainer">
-            <p>Footer</p>
+            <div id="fpFooterLinks">
+                <ul>
+                    <li>
+                        <h5>Home</h5>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            FamilyParc
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">Park Events
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            Promotion Deals
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h5>Attractions and Amenities</h5>
+                    </li>
+                    <li>
+                        <a href="attractions.html">
+                            Park Attractions
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h5>Showings and Bookings</h5>
+                    </li>
+                    <li>
+                        <a href="theatre.html">
+                            Theatre Showings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="theatre.html">
+                            Park Bookings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="theatre.html">
+                            Hotel Bookings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fpSeparator"></div>
+
+            <div id="fpSocialMedia">
+                <h5>Connect With Us</h5>
+
+                <div>
+                    <img src="img/facebook-square-rounded.png" alt="Facebook">
+
+                    <img src="img/twitter-square-rounded.png" alt="Twitter">
+
+                    <img src="img/whatsapp-square-rounded.png" alt="Whatsapp">
+                </div>
+            </div>
+
+            <div id="fpPrivacyPolicy">
+                <div id="close-policy"></div>
+                <a id="fpPrivacyPolicy" href="#privacy-policy">Privacy and Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <article>
+            <header>
+
+            </header>
+        </article>
+    </section>
+
+    <!-- 
+        Intentional inline styling here to prevent popup from popping in when loading webpage, 
+        which can be a bit jarring 
+    -->
+    <div id="privacy-policy" style="display: none;">
+        <div id="fpPolicyBackdrop">
+        </div>
+
+        <div class="popup">
+            <a href="#close-policy" class="close">&times;</a>
+            <h3>Policy</h3>
+            <p>
+                We are committed to endeavoring to manage any personal information provided to us in a
+                responsible and secure manner and at all times in accordance with applicable laws. By
+                choosing to provide us with your personal information, you are consenting to its use by
+                us in accordance with these Terms and Conditions. We shall not share your personal
+                information with third parties or use it for any substantially or materially different
+                purpose unless otherwise stated at the time of collection. We may contact you for the
+                purposes of updating you on our products and services as well as any other information
+                that we believe may be of interest to you. In the event you do not wish to be contacted
+                for marketing purposes, please notify us at the time you are asked to provide us with
+                any personal information.
+
+                You expressly acknowledge that we may use your anonymous data in order to collate
+                industry and marketing statistics. We may also ask third parties to collate any such
+                statistics on our behalf.
+            </p>
+
+            <h3>User Accounts</h3>
+            <p>
+                You may need to create an account and provide information about yourself in order to use
+                some of the features on the Website. You are responsible for maintaining the
+                confidentiality of your account password. You are also responsible for all activities
+                that occur in connection with your account. You agree to notify us immediately of any
+                unauthorized use of your account.
+                Your account is for your personal, non-commercial use only. You may not impersonate
+                someone else (e.g., adopt the identity of a celebrity), create an account for anyone
+                other than yourself, provide an email address other than your own, or create multiple
+                accounts.
+
+                We reserve the right to close your account at any time for any or no reason.
+            </p>
         </div>
     </div>
 </body>

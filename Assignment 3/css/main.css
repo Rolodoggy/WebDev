@@ -7,8 +7,12 @@ Secondary: rgb(168, 218, 220)
 
 /* General CSS */
 
+@font-face {
+  font-family: Avenir;
+  src: url("fonts/AvenirLTStd-Book.otf") format("opentype");
+}
 * {
-  font-family: "Times New Roman", Arial, helvetica, sans-serif;
+  font-family: Avenir, Arial,"Times New Roman", helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
