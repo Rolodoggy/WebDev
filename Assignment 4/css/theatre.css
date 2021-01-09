@@ -1,0 +1,96 @@
+#fpTheatreShowingsContainer {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+}
+#fpTheatreShowingsTitle { grid-area: 1 / 1 / 1 / 4; }
+#fpTheatreShowingsDescription { grid-area: 2 / 1 / 2 / 3; }
+#fpTheatreShowingsImages { grid-area: 2 / 3 / 2 / 4;}
+#fpTheatreShowingsContainer h2 { 
+  text-align: center;
+}
+#fpTheatreShowingsContainer img {
+  width: 100%;
+}
+#fpTheatreShowingsDescription {
+  padding-right: 10px;
+}
+
+#fpBookingsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  column-gap: 30px;
+}
+
+#fpBookingsContainer > div {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+}
+
+#fpBookingsContainer h2 {
+  text-align: center;
+}
+
+.fpHotelTitle { grid-area: 1 / 1 / 1 / 4; }
+.fpHotelPrices { grid-area: 2 / 1 / 2 / 3; }
+.fpHotelCalendar { grid-area: 2 / 3 / 2 / 4; }
+.fpBookingsTitle { grid-area: 1 / 1 / 1 / 4; }
+.fpBookingsPrices { grid-area: 2 / 1 / 2 / 3; }
+.fpBookingsCalendar { grid-area: 2 / 3 / 2 / 4; }
+
+
+/* Calendar */
+.fpCalendar {
+  max-width: max-content;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.fpCalendarMonth {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* DOW = Day Of Week */
+.fpCalendarDOW,
+.fpCalendarDOM {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.fpCalendarDOW {
+  margin-top: 1.25em;
+}
+
+.fpCalendarDOW {
+  text-align: center;
+}
+
+/* DOM = (you guessed it!) Day Of Month */
+.fpCalendarDOM span:first-child {
+  grid-column: 3;
+}
+
+.fpCalendarDOM span {
+  position: relative;
+  padding: 7px;
+}
+
+.fpCalendarDOM {
+  text-align: center;
+}
+
+/* Sales Banner */
+#fpSalesBanner {
+  text-align: center;
+}
+#fpSalesBanner img {
+  width: 100%;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}

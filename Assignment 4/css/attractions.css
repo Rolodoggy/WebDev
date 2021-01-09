@@ -1,0 +1,45 @@
+/* See "grid" structure in Chrome. 
+Open dev tools > Elements tab > find the element with the "grid" button/bubble, click and see the layout. This one is fairly straightforward, it consists of 3 columns and 2 rows, with
+30px "gutters" between them.
+*/
+#fpAttractionsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+#fpAttractionsContainer img {
+  width: 100%;
+}
+#fpAttractionsContainer .fpCard img {
+  height: 250px;
+  width: 100%;
+}
+#fpAttractionsContainer .fpCard p {
+  justify-content: center;
+}
+
+/* 
+  Here we have 2 columns and 2 rows. 
+  Evenly split the title and text on the left and the
+  image on the right.
+*/
+#fpFacilitiesContainer .fpCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+#fpFacilitiesContainer img {
+  width: 100%;
+}
+/* See documentation for grid-area: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area,
+but the short of it: the numbers 1/2/2/2 correspond
+to row start, column start, row end, column end.
+It denotes _where_ in the grid the element with this class sits. */
+.fpFacilitiesTitle { grid-area: 1 / 1 / 2 / 2; }
+.fpFacilitiesDescription { 
+  grid-area: 2 / 1 / 3 / 2; 
+  padding-right: 10px;
+}
+.fpFacilitiesImage { grid-area: 1 / 2 / 3 / 2; }
